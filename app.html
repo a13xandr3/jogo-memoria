@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="./imgs/header.jpg" alt="header" class="img">
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="controles">
+                <span>
+                    <label>Tentativas</label>
+                    <input type="text" title="caixa" id="tentativas" disabled />
+                </span>
+                <span>
+                    <label>Acertos</label>
+                    <input type="text" title="caixa" id="acertos" disabled />
+                </span>
+                <button type="button" class="btn btn-primary disabled" disabled id="recomecar" onclick="inicio()">
+                    <span>Recomeçar</span>
+                </button>
+            </div>
+            <div id="mensagem" class="msg">
+            </div>
+            <div class="main" id="main"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jogo da Memória - Developed by Alexandre Esteves</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>

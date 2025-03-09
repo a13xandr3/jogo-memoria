@@ -1,0 +1,157 @@
+/* Reset geral */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* HEADER */
+.header { .img { width: 100%; }}
+/* LAYOUT PRINCIPAL */
+.main { display: flex; flex-wrap: wrap; /* Permite quebra para a linha seguinte */
+    gap: 40px; background-color: #f2e6b6; padding: 4rem; justify-content: center; }
+/* BLOCO DOS CARDS */
+.blocks { display: flex; align-items: center; justify-content: center; }
+/* IMAGENS */
+img { width: 25%; }
+/* FOOTER */
+footer { display: flex; justify-content: center; }
+/* MENSAGEM */
+.msg { background-color: #f2e6b6; color: #005500; font-size: 3rem; font-weight: 800;
+    text-align: center; width: 100%; height: 5rem; display: flex; justify-content: center; align-items: center; }
+/* CONTROLES */
+.controles { background-color: #f2e6b6; width: 100%; height: auto; display: flex; justify-content: center; }
+/* RESPONSIVIDADE */
+/* 📱 Dispositivos Pequenos (Celulares Pequenos) */
+
+@media (max-width: 480px) {
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 2% 3% 3% 3%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+}
+
+/* 📱 Celulares Médios e Grandes */
+@media (min-width: 481px) and (max-width: 768px) {
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 1%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+}
+
+/* 📊 Tablets e iPads */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /*
+    .main { padding: 3rem; gap: 35px; }
+    img { width: 11rem; }
+    .msg { font-size: 2.8rem; }
+    .btn { font-size: 1.2rem; }
+    input { font-size: 2.8rem; width: 5rem; }
+    */
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 1%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+
+}
+
+/* 💻 Laptops e Telas Médias */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    /*
+    .main { padding: 4rem; gap: 40px; }
+    img { width: 12rem; }
+    .msg { font-size: 3rem; }
+    .btn { font-size: 1.25rem; }
+    input { font-size: 3rem; width: 5rem; }
+    */
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 1%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+
+}
+
+/* 🖥️ Monitores Grandes (Full HD) */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    /*
+    .main { padding: 5rem; gap: 45px; }
+    img { width: 13rem; }
+    .msg { font-size: 3.2rem; }
+    .btn { font-size: 1.3rem; }
+    input { font-size: 3.2rem; width: 5.5rem; }
+    */
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 1%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+}
+
+/* 🖥️ Monitores Ultra Largos e 4K */
+@media (min-width: 1921px) {
+    /*
+    .main { padding: 6rem; gap: 50px; }
+    img { width: 14rem; }
+    .msg { font-size: 3.5rem; }
+    .btn { font-size: 1.4rem; }
+    input { font-size: 3.5rem; width: 6rem; }
+    */
+    .main { padding: 2rem; gap: 30px; }
+    img { width: 10rem; }
+    .msg { font-size: 2.5rem; }
+    .btn { font-size: 1.1rem; }
+    input { font-size: 2.5rem; width: 4.5rem; }
+    .btn span { color: #fff; font-size: 50%; padding: 1% 2%; cursor: pointer; max-width: 10%; }
+    .btn-primary { color: #fff; background-color: #0d6efd; border-color: #0d6efd; margin: 5%; padding: 1%; }
+    /* BOTÕES */
+    .btn { font-size: 1.25rem; border-radius: 0.4rem; }
+    .btn span { color: #fff; font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+    /* INPUTS */
+    input { border: 1px solid #ccc; border-radius: 0.3rem; padding: 10%; font-size: 7vw; font-weight: 900; color: #7fbfff; width: 80%; margin: 3%; text-align: center; }
+    /* BOTÃO DESABILITADO */
+    .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
+}
