@@ -1,3 +1,5 @@
+let timer = 15000;
+let timerHideMsg = 1500;
 let comparaImagens = [];
 let imagensCertas = [];
 let contagemTentativas = 1;
@@ -55,7 +57,7 @@ function inicio() {
         main.appendChild(makeBloco);
     });
     // Ocultar as imagens após 10 segundos
-    setTimeout(ocultarImagens, 10000);
+    setTimeout(ocultarImagens, timer);
 }
 // Função para substituir todas as imagens por "back.jpg"
 function ocultarImagens() {
@@ -73,7 +75,7 @@ function showHideMensages(msg) {
     document.getElementById('mensagem').innerHTML = msg;
     setTimeout(() => {
         document.getElementById('mensagem').innerHTML = '';
-    }, 1500);
+    }, timerHideMsg);
 }
 // Evento de clique para revelar a imagem original e comparar
 document.addEventListener('click', (event) => {
@@ -107,7 +109,7 @@ document.addEventListener('click', (event) => {
             } else {
                 showHideMensages('Não são iguais..');
                 //problema - apaga inclusive os corretos
-                setTimeout(ocultarImagens, 1500);
+                setTimeout(ocultarImagens, timerHideMsg);
             }
             document.getElementById('tentativas').value = parseInt(contagemTentativas / 2);
             // Limpa o array para a próxima comparação
