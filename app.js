@@ -6,7 +6,7 @@ let contagemTentativas = 1;
 let contagemAcertos = 1;
 let blocos = [];
 let bloqueiaCliques = false; // Flag para bloquear cliques extras
-
+let quantidadeImagens = 10;
 function inicializa() {
     comparaImagens = [];
     imagensCertas = [];
@@ -95,7 +95,7 @@ document.addEventListener('click', (event) => {
         if (comparaImagens.length == 2) {
             bloqueiaCliques = true; // Bloqueia cliques até a verificação
             if (comparaImagens[0].src == comparaImagens[1].src) {
-                if ( parseInt(imagensCertas.length) == 9 ) {
+                if ( parseInt(imagensCertas.length) == quantidadeImagens ) {
                     document.getElementById('recomecar').removeAttribute('disabled');
                     document.getElementById('recomecar').classList.remove('disabled');
                     document.getElementById('mensagem').innerHTML = 'Grande Vencedor!!';
