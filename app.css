@@ -23,7 +23,7 @@
 /* 📱 Dispositivos Pequenos (Celulares Pequenos) */
 @media (max-width: 480px) {
     .main { padding: 2rem; gap: 30px; }
-    img { width: 10rem; }
+    img { width: 3rem; }
     .msg { font-size: 2.5rem; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 100%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
@@ -32,7 +32,7 @@
 /* 📱 Celulares Médios e Grandes */
 @media (min-width: 481px) and (max-width: 768px) {
     .main { padding: 2rem; gap: 30px; }
-    img { width: 10rem; }
+    img { width: 3rem; }
     .msg { font-size: 2.5rem; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 110%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
@@ -41,7 +41,7 @@
 /* 📊 Tablets e iPads */
 @media (min-width: 769px) and (max-width: 1024px) {
     .main { padding: 2rem; gap: 30px; }
-    img { width: 10rem; }
+    img { width: 3rem; }
     .msg { font-size: 2.5rem; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 130%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
