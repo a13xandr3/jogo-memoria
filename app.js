@@ -54,8 +54,8 @@ function inicio() {
         makeBloco.appendChild(makeImg);
         main.appendChild(makeBloco);
     });
-    // Ocultar as imagens após 5 segundos
-    setTimeout(ocultarImagens, 5000);
+    // Ocultar as imagens após 10 segundos
+    setTimeout(ocultarImagens, 10000);
 }
 // Função para substituir todas as imagens por "back.jpg"
 function ocultarImagens() {
@@ -73,27 +73,7 @@ function showHideMensages(msg) {
     document.getElementById('mensagem').innerHTML = msg;
     setTimeout(() => {
         document.getElementById('mensagem').innerHTML = '';
-    }, 2000);
-}
-/**
- * Desativa os cliques nos cards.
- */
-function disableClicks() {
-    setTimeout(() => {
-        document.querySelectorAll('.blocks').forEach((x) => {
-            x.style.pointerEvents = 'none';
-        })
-    }, 1000);
-}
-/**
- * Ativa os cliques nos cards.
- */
-function enableClicks() {
-    setTimeout(() => {
-        document.querySelectorAll('.blocks').forEach((x) => {
-             x.style.pointerEvents = 'auto';
-         });
-    }, 1000);
+    }, 1500);
 }
 // Evento de clique para revelar a imagem original e comparar
 document.addEventListener('click', (event) => {
@@ -127,7 +107,7 @@ document.addEventListener('click', (event) => {
             } else {
                 showHideMensages('Não são iguais..');
                 //problema - apaga inclusive os corretos
-                setTimeout(ocultarImagens, 2000);
+                setTimeout(ocultarImagens, 1500);
             }
             document.getElementById('tentativas').value = parseInt(contagemTentativas / 2);
             // Limpa o array para a próxima comparação
