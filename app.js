@@ -99,13 +99,14 @@ document.addEventListener('click', (event) => {
                     document.getElementById('recomecar').removeAttribute('disabled');
                     document.getElementById('recomecar').classList.remove('disabled');
                     document.getElementById('mensagem').innerHTML = 'Grande Vencedor!!';
+                    document.getElementById('acertos').value = (contagemAcertos);
                 } else {
                     showHideMensages('Ótimo!, você acertou!');
                     document.getElementById('acertos').value = (contagemAcertos);
-                    imagensCertas.push({ imgElement: img, src: originalSrc });
-                    contagemAcertos++;
                     bloqueiaCliques = false;
                 }
+                contagemAcertos++;
+                imagensCertas.push({ imgElement: img, src: originalSrc });
             } else {
                 showHideMensages('Não são iguais..');
                 //problema - apaga inclusive os corretos
