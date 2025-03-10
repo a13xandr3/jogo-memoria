@@ -9,7 +9,6 @@
         text-align: center; width: 100%; height: 5rem; display: flex; justify-content: center; align-items: center; }
 
     .controles { background-color: #f2e6b6; width: 100%; height: 10vh; display: flex; justify-content: center; padding: 0 32px 0 32px; }
-
     .controles > span { width: 33.33%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
     .span-button {
@@ -18,22 +17,20 @@
         .btn-primary { width: 100%; /*padding: 15% 16.66% 15% 16.66%;*/ height: 60%; }
         .btn span { color: #fff; /*padding: 3% 0 9% 0;*/ cursor: pointer; }
     }
-
-
 /* 📱 Dispositivos Pequenos (Celulares Pequenos) */
 @media (max-width: 480px) {
-    .main { padding: 2rem; gap: 30px; }
-    img { width: 3rem; }
-    .msg { font-size: 2.5rem; }
+    .main { padding: 0.5rem; gap: 18px; }
+    img { width: 5.1rem; }
+    .msg { font-size: 1.5rem !important; height: 1rem !important; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 100%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
     .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
 }
 /* 📱 Celulares Médios e Grandes */
 @media (min-width: 481px) and (max-width: 768px) {
-    .main { padding: 2rem; gap: 30px; }
-    img { width: 3rem; }
-    .msg { font-size: 2.5rem; }
+    .main { padding: 0.5rem; gap: 18px; }
+    img { width: 5.1rem; }
+    .msg { font-size: 1.5rem !important; height: 1rem !important; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 110%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
     .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
@@ -42,7 +39,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     .main { padding: 2rem; gap: 30px; }
     img { width: 3rem; }
-    .msg { font-size: 2.5rem; }
+    .msg { font-size: 1.3rem !important; padding: 1rem !important; height: 2rem; }
     input { border: 1px solid #ccc; border-radius: 0.3rem; font-size: 130%; font-weight: 900; color: #7fbfff; width: 80%; height: auto; text-align: center; display: flex; }
     .btn span { font-size: 100%; }
     .disabled { color: #eee !important; background-color: #aaa !important; border-color: #aaa !important; cursor: not-allowed; }
