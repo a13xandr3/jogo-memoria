@@ -1,12 +1,10 @@
-let timer = 15000;
-let timerHideMsg = 1500;
 let comparaImagens = [];
 let imagensCertas = [];
 let contagemTentativas = 1;
 let contagemAcertos = 1;
 let blocos = [];
 let bloqueiaCliques = false; // Flag para bloquear cliques extras
-let quantidadeImagens = 10;
+
 function inicializa() {
     comparaImagens = [];
     imagensCertas = [];
@@ -56,8 +54,8 @@ function inicio() {
         makeBloco.appendChild(makeImg);
         main.appendChild(makeBloco);
     });
-    // Ocultar as imagens após 10 segundos
-    setTimeout(ocultarImagens, timer);
+    // Ocultar as imagens após 15 segundos
+    setTimeout(ocultarImagens, 15000);
 }
 // Função para substituir todas as imagens por "back.jpg"
 function ocultarImagens() {
@@ -75,7 +73,7 @@ function showHideMensages(msg) {
     document.getElementById('mensagem').innerHTML = msg;
     setTimeout(() => {
         document.getElementById('mensagem').innerHTML = '';
-    }, timerHideMsg);
+    }, 2000);
 }
 // Evento de clique para revelar a imagem original e comparar
 document.addEventListener('click', (event) => {
@@ -95,22 +93,23 @@ document.addEventListener('click', (event) => {
         if (comparaImagens.length == 2) {
             bloqueiaCliques = true; // Bloqueia cliques até a verificação
             if (comparaImagens[0].src == comparaImagens[1].src) {
-                if ( parseInt(imagensCertas.length) == quantidadeImagens ) {
+                if ( parseInt(imagensCertas.length) == 9 ) {
                     document.getElementById('recomecar').removeAttribute('disabled');
                     document.getElementById('recomecar').classList.remove('disabled');
+                    document.getElementById('recomecar').classList.add();
                     document.getElementById('mensagem').innerHTML = 'Grande Vencedor!!';
-                    document.getElementById('acertos').value = (contagemAcertos);
+                    document.getElementById('acertos').value = contagemAcertos;
                 } else {
                     showHideMensages('Ótimo!, você acertou!');
-                    document.getElementById('acertos').value = (contagemAcertos);
+                    document.getElementById('acertos').value = contagemAcertos;
+                    imagensCertas.push({ imgElement: img, src: originalSrc });
+                    contagemAcertos++;
                     bloqueiaCliques = false;
                 }
-                contagemAcertos++;
-                imagensCertas.push({ imgElement: img, src: originalSrc });
             } else {
                 showHideMensages('Não são iguais..');
                 //problema - apaga inclusive os corretos
-                setTimeout(ocultarImagens, timerHideMsg);
+                setTimeout(ocultarImagens, 2000);
             }
             document.getElementById('tentativas').value = parseInt(contagemTentativas / 2);
             // Limpa o array para a próxima comparação
